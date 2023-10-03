@@ -6,7 +6,7 @@ const open_sans = Open_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Next Talk',
-  description: 'An online platform that enables you to virtually connect with friends, teammates, and communities',
+  description: 'An online platform that enables you to virtually connect with friends, teammates and communities',
 }
 
 export default function RootLayout({
