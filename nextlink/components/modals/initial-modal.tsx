@@ -6,8 +6,10 @@ import {
 
 const InitialModal = () => {
   return (
-    <Dialog open={true}>
-      asd
+    <Dialog open>
+      <DialogContent className="bg-white text-black p-0 overflow-hidden">
+        
+      </DialogContent>
     </Dialog>
   )
 }
