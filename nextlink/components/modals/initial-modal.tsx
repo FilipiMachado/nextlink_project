@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -33,10 +34,16 @@ const formSchema = z.object({
 });
 
 const InitialModal = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "name empty",
+      name: "",
       imageUrl: "image empty",
     },
   });
@@ -48,6 +55,10 @@ const InitialModal = () => {
   };
 
   console.log(onSubmit);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <Dialog open>
@@ -76,10 +87,25 @@ const InitialModal = () => {
                     <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
                       Server Name
                     </FormLabel>
+                    <FormControl>
+                      <Input
+                        disabled={isLoading}
+                        className="bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
+                        placeholder="Enter server name"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
                   </FormItem>
                 )}
               />
             </div>
+            
+            <DialogFooter className="px-6 py-4">
+              <Button disabled={isLoading} variant="primary">
+                Create
+              </Button>
+            </DialogFooter>
           </form>
         </Form>
       </DialogContent>
