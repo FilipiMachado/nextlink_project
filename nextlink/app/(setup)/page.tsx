@@ -24,9 +24,7 @@ const SetupPage = async () => {
 
   return (
     <div>
-      <div>
-        <h1>SetupPage</h1>
-      </div>
+      Setup Page
     </div>
   );
 };
