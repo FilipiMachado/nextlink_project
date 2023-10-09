@@ -55,7 +55,7 @@ const InitialModal = () => {
     console.log(values);
   };
 
-  console.log(onSubmit);
+  //console.log(onSubmit);
 
   if (!isMounted) {
     return null;
