@@ -18,7 +18,16 @@ const FileUpload = ({ onChange, value, endpoint }: FileUploadProps) => {
   //console.log(value)
   //console.log(fileType)
 
-  if (value && fileType !== "pdf") {
+  const isValidUrl = (string: string) => {
+    try {
+      new URL(string);
+      return true;
+    } catch (_) {
+      return false;  
+    }
+  }
+
+  if (value && fileType !== "pdf" && isValidUrl(value)) {
     return (
       <div className="relative h-20 w-20">
         <Image fill src={value} alt="Upload" className="rounded-full" />
