@@ -1,3 +1,5 @@
+import NavigationAction from "@/components/navigation/navigation-action";
+
 import { redirect } from "next/navigation";
 
 import { currentProfile } from "@/lib/current-profile";
@@ -26,7 +28,7 @@ const NavigationSidebar = async () => {
 
   return (
     <div className="space-y-4 flex flex-col items-center h-full text-primary w-full py-3 dark:bg-[#1E1F22]">
-      <div>NavigationSidebar</div>
+      <NavigationAction />
     </div>
   );
 };
