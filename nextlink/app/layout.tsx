@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const open_sans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Next Talk",
+  title: "We Talk",
   description:
     "An online platform that enables you to virtually connect with friends, teammates and communities",
 };
