@@ -15,19 +15,8 @@ interface FileUploadProps {
 
 const FileUpload = ({ onChange, value, endpoint }: FileUploadProps) => {
   const fileType = value?.split(".").pop();
-  //console.log(value)
-  //console.log(fileType)
 
-  /* const isValidUrl = (string: string) => {
-    try {
-      new URL(string);
-      return true;
-    } catch (_) {
-      return false;  
-    }
-  } */
-
-  if (value && fileType !== "pdf" /* && isValidUrl(value) */) {
+  if (value && fileType !== "pdf") {
     return (
       <div className="relative h-20 w-20">
         <Image fill src={value} alt="Upload" className="rounded-full" />
