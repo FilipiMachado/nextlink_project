@@ -1,5 +1,7 @@
 "use client";
 
+import { Copy, RefreshCw } from "lucide-react";
+
 import {
   Dialog,
   DialogContent,
@@ -8,11 +10,14 @@ import {
 } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 import { useModal } from "@/hooks/use-modal-store";
+import { useOrigin } from "@/hooks/use-origin";
 
 export const InviteModal = () => {
   const { isOpen, onClose, type } = useModal();
+  const origin = useOrigin();
 
   const isModalOpen = isOpen && type === "invite";
 
@@ -33,7 +38,18 @@ export const InviteModal = () => {
               className="bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
               value="invite-link"
             />
+            <Button size="icon">
+              <Copy className="w-4 h-4" />
+            </Button>
           </div>
+          <Button
+            variant="link"
+            size="sm"
+            className="text-xs text-zinc-500 mt-4"
+          >
+            Generate a new link
+            <RefreshCw className="w-4 h-4 ml-2" />
+          </Button>
         </div>
       </DialogContent>
     </Dialog>
