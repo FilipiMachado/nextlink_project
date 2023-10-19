@@ -4,6 +4,8 @@ import { ChannelType } from "@prisma/client";
 import { currentProfile } from "@/lib/current-profile";
 import { db } from "@/lib/db";
 
+import { ServerHeader } from "@/components/server/server-header";
+
 interface ServerSidebarProps {
   serverId: string;
 }
@@ -57,7 +59,17 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
     (member) => member.profileId === profile.id
   )?.role;
 
-  console.log(role);
+  const serverWithMembers = {
+    ...server,
+    members: server.Member,
+  };
 
-  return <div>ServerSidebar</div>;
+  //console.log(role);
+  //console.log(server)
+
+  return (
+    <div className="flex flex-col h-full text-primary w-full dark:bg-[#2B2D31] bg-[#F2F3F5]">
+      <ServerHeader server={serverWithMembers} role={role} />
+    </div>
+  );
 };
