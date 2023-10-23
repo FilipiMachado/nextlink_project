@@ -11,7 +11,7 @@ import { ModalProvider } from "@/components/providers/modal-provider";
 const open_sans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "We Talk",
+  title: "W3 T4lk",
   description:
     "An online platform that enables you to virtually connect with friends, teammates and communities",
 };
