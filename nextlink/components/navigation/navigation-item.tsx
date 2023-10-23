@@ -13,7 +13,6 @@ interface NavigationItemProps {
 }
 
 export const NavigationItem = ({ id, imageUrl, name }: NavigationItemProps) => {
-  console.log(imageUrl);
   const params = useParams();
   const router = useRouter();
 

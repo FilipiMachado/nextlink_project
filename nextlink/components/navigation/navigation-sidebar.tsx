@@ -14,8 +14,6 @@ import { db } from "@/lib/db";
 const NavigationSidebar = async () => {
   const profile = await currentProfile();
 
-  //console.log(profile);
-
   if (!profile) {
     return redirect("/");
   }
@@ -29,8 +27,6 @@ const NavigationSidebar = async () => {
       },
     },
   });
-
-  //console.log(servers);
 
   return (
     <div className="space-y-4 flex flex-col items-center h-full text-primary w-full py-3 dark:bg-[#1E1F22]">

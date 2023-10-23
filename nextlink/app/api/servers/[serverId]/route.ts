@@ -8,7 +8,7 @@ export async function PATCH(
   { params }: { params: { serverId: string } }
 ) {
   try {
-    const profile = currentProfile();
+    const profile = await currentProfile();
     const { name, imageUrl } = await req.json();
 
     if (!profile) {
@@ -18,12 +18,15 @@ export async function PATCH(
     const server = await db.server.update({
       where: {
         id: params.serverId,
+        profileId: profile.id,
       },
       data: {
         name,
         imageUrl,
       },
     });
+
+    return NextResponse.json(server);
   } catch (error) {
     console.log("[SERVER_ID_PATCH]", error);
     return new NextResponse("Internal Server Error", { status: 500 });

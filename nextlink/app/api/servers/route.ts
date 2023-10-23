@@ -10,8 +10,6 @@ export async function POST(req: Request) {
     const { name, imageUrl } = await req.json();
     const profile = await currentProfile();
 
-    console.log(imageUrl)
-
     if (!profile) {
       return new NextResponse("Unauthorized", { status: 401 });
     }
