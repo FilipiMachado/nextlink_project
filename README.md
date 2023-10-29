@@ -24,6 +24,11 @@ This project was developed using these technologies:
 - [Tailwind](https://tailwindcss.com/)
 - [Clerk](https://clerk.com/)
 - [Zod](https://zod.dev/)
+- [Prisma](https://www.prisma.io/)
+- [Zustand](https://github.com/pmndrs/zustand)
+- [UploadThing](https://uploadthing.com/)
+- [Query-String](https://www.npmjs.com/package/query-string)
+- [Axios](https://axios-http.com/)
 
 ## 🚀 How to Execute
 
