@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -34,3 +35,60 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+=======
+
+
+<p align="center">
+  <a href="https://imgur.com/JZ8mYYm"><img src="https://imgur.com/JZ8mYYm.png" title="source: imgur.com" /></a>
+</p>
+
+## 💻 Project
+
+ADICIONAR DESCRIÇÃO
+
+<p align="center">
+  <a href="https://imgur.com/2vfvOAV"><img src="https://imgur.com/2vfvOAV.png" title="source: imgur.com" /></a>
+</p>
+
+<br>
+
+## ⚡ Technologies
+
+This project was developed using these technologies:
+
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Shadcn/ui](https://ui.shadcn.com/)
+- [Tailwind](https://tailwindcss.com/)
+- [Clerk](https://clerk.com/)
+- [Zod](https://zod.dev/)
+- [Prisma](https://www.prisma.io/)
+- [Zustand](https://github.com/pmndrs/zustand)
+- [UploadThing](https://uploadthing.com/)
+- [Query-String](https://www.npmjs.com/package/query-string)
+- [Axios](https://axios-http.com/)
+
+## 🚀 How to Execute
+
+Clone the project and access the folder.
+
+```bash
+$ git clone https://github.com/FilipiMachado/nextlink_project
+$ cd nextlink_project
+```
+
+To start the project, follow these steps:
+```bash
+# Install the dependencies
+$ npm install
+
+# Start the project
+$ npm run dev
+```
+The app will be available at this address http://localhost:3000
+
+## 📝 License
+
+This project is under MIT license. Read this file [LICENSE](LICENSE.md) for more details.
+
+>>>>>>> 1b2e9d78eeb43d3b6628c6590114b8b86703b086
