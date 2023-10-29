@@ -35,8 +35,8 @@ This project was developed using these technologies:
 Clone the project and access the folder.
 
 ```bash
-$ git clone https://github.com/FilipiMachado/saas-ai-fullstack
-$ cd saas-ai-fullstack
+$ git clone https://github.com/FilipiMachado/nextlink_project
+$ cd nextlink_project
 ```
 
 To start the project, follow these steps:
