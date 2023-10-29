@@ -10,6 +10,13 @@ ADICIONAR DESCRIÇÃO
 
 <p align="center">
   <a href="https://i.imgur.com/exc2Y0n.png"><img src="https://i.imgur.com/exc2Y0n.png" title="source: imgur.com" /></a>
+  <a href="https://i.imgur.com/oxxbJb7.png"><img src="https://i.imgur.com/oxxbJb7.png" title="source: imgur.com" /></a>
+  <a href="https://i.imgur.com/8nMwr1s.png"><img src="https://i.imgur.com/8nMwr1s.png" title="source: imgur.com" /></a>
+  <a href="https://i.imgur.com/5PLky01.png"><img src="https://i.imgur.com/5PLky01.png" title="source: imgur.com" /></a>
+  <a href="https://i.imgur.com/acBqrK0.png"><img src="https://i.imgur.com/acBqrK0.png" title="source: imgur.com" /></a>
+  <a href="https://i.imgur.com/vdvjNQA.png"><img src="https://i.imgur.com/vdvjNQA.png" title="source: imgur.com" /></a>
+  <a href="https://i.imgur.com/nbuxnAX.png"><img src="https://i.imgur.com/nbuxnAX.png" title="source: imgur.com" /></a>
+  <a href="https://i.imgur.com/N3vfnKn.png"><img src="https://i.imgur.com/N3vfnKn.png" title="source: imgur.com" /></a>
 </p>
 
 <br>
