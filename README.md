@@ -2,7 +2,7 @@
   <a href="https://imgur.com/JZ8mYYm"><img src="https://imgur.com/JZ8mYYm.png" title="source: imgur.com" /></a>
 </p>
 
-<p>Access the project: https://nextlinkproject-production.up.railway.app/</p>p
+<p>Access the project: https://nextlinkproject-production.up.railway.app/</p>
 
 ## 💻 Project
 
