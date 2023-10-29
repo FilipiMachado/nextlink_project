@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://i.imgur.com/1dWRMd1.png"><img src="https://i.imgur.com/1dWRMd1.png" style="width: 200px; height: 150px;" title="source: imgur.com" /></a>
+  <a href="https://i.imgur.com/1dWRMd1.png"><img src="https://i.imgur.com/1dWRMd1.png" style="width: 200px; height: 200px;" title="source: imgur.com" /></a>
 </p>
 
 <p>Access the project: https://nextlinkproject-production.up.railway.app/</p>
