@@ -9,7 +9,7 @@
 ADICIONAR DESCRIÇÃO
 
 <p align="center">
-  <a href="https://imgur.com/exc2Y0n"><img src="https://imgur.com/exc2Y0n" title="source: imgur.com" /></a>
+  <a href="https://i.imgur.com/exc2Y0n.png"><img src="https://i.imgur.com/exc2Y0n.png" title="source: imgur.com" /></a>
 </p>
 
 <br>
