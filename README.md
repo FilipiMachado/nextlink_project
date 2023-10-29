@@ -9,6 +9,7 @@
 An online platform that enables you to virtually connect with friends, teammates and communities.
 
 <br>
+<br>
 
 <p align="center">
   <a href="https://i.imgur.com/exc2Y0n.png"><img src="https://i.imgur.com/exc2Y0n.png" title="source: imgur.com" /></a>
