@@ -2,11 +2,11 @@
   <a href="https://i.imgur.com/1dWRMd1.png"><img src="https://i.imgur.com/1dWRMd1.png" style="width: 250px; height: 200px;" title="source: imgur.com" /></a>
 </p>
 
-<p>Access the project: https://nextlinkproject-production.up.railway.app/</p>
-
 ## 💻 Project (Work in Progress)
 
-An online platform that enables you to virtually connect with friends, teammates and communities.
+<strong>Access the project:</strong> https://nextlinkproject-production.up.railway.app/ (Login is needed)
+
+## An online platform that enables you to virtually connect with friends, teammates and communities.
 
 <p align="center">
   <a href="https://i.imgur.com/exc2Y0n.png"><img src="https://i.imgur.com/exc2Y0n.png" title="source: imgur.com" /></a>
