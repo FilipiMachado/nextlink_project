@@ -59,5 +59,3 @@ The app will be available at this address http://localhost:3000
 ## 📝 License
 
 This project is under MIT license. Read this file [LICENSE](LICENSE.md) for more details.
-
->>>>>>> 1b2e9d78eeb43d3b6628c6590114b8b86703b086
