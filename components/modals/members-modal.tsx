@@ -91,8 +91,8 @@ export const MembersModal = () => {
       console.log(error);
     } finally {
       setLoadingId("");
-      console.log(server.members);
       router.refresh();
+      onClose()
     }
   };
 
