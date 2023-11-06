@@ -10,6 +10,7 @@ import { Separator } from "@/components/ui/separator";
 import { ServerHeader } from "@/components/server/server-header";
 import { ServerSearch } from "@/components/server/server-search";
 import { ServerSection } from "@/components/server/server-section";
+import { ServerChannel } from "@/components/server/server-channel";
 
 interface ServerSidebarProps {
   serverId: string;
@@ -137,7 +138,12 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
               label="Text Channels"
             />
             {textChannels.map((channel) => (
-              <ServerChannel />
+              <ServerChannel
+                key={channel.id}
+                channel={channel}
+                role={role}
+                server={server}
+              />
             ))}
           </div>
         )}
