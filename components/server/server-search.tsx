@@ -53,9 +53,6 @@ export const ServerSearch = ({ data }: ServerSearchProps) => {
     id: string;
     type: "channel" | "member";
   }) => {
-    console.log(id);
-    console.log(type);
-
     setOpen(false);
 
     if (type === "member") {
