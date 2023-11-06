@@ -32,8 +32,6 @@ export const ServerSearch = ({ data }: ServerSearchProps) => {
   const router = useRouter();
   const params = useParams();
 
-  console.log(params);
-
   useEffect(() => {
     const down = (e: globalThis.KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
