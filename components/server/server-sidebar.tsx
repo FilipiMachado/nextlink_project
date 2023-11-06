@@ -136,6 +136,9 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
               role={role}
               label="Text Channels"
             />
+            {textChannels.map((channel) => (
+              <ServerChannel />
+            ))}
           </div>
         )}
       </ScrollArea>
