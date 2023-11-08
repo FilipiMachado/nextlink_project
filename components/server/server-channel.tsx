@@ -5,6 +5,7 @@ import { Edit, Hash, Lock, Mic, Trash, Video } from "lucide-react";
 import { Channel, ChannelType, MemberRole, Server } from "@prisma/client";
 import { useParams, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { useModal } from "@/hooks/use-modal-store";
 
 import { ActionTooltip } from "@/components/action-tooltip";
 
@@ -25,6 +26,7 @@ export const ServerChannel = ({
   server,
   role,
 }: ServerChannelProps) => {
+  const {onOpen} = useModal()
   const params = useParams();
   const router = useRouter();
 
