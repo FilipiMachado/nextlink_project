@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 
 import { currentProfile } from "@/lib/current-profile";
+import { db } from "@/lib/db";
+import { MemberRole } from "@prisma/client";
 
 export async function DELETE(
   req: Request,
@@ -23,6 +25,32 @@ export async function DELETE(
     if (!params.channelId) {
       return new NextResponse("Channel ID Missing", { status: 400 });
     }
+
+    const server = await db.server.update({
+      where: {
+        id: serverId,
+        Member: {
+          some: {
+            profileId: profile.id,
+            role: {
+              in: [MemberRole.ADMIN, MemberRole.MODERATOR],
+            },
+          },
+        },
+      },
+      data: {
+        Channel: {
+          delete: {
+            id: params.channelId,
+            name: {
+              not: "general",
+            },
+          },
+        },
+      },
+    });
+
+    return NextResponse.json(server);
   } catch (error) {
     console.log("CHANNEL_ID_DELETE", error);
     return new NextResponse("Internal Server Error", { status: 500 });
