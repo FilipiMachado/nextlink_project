@@ -1,12 +1,14 @@
 "use client";
 
-import { useForm } from "react-hook-form";
 import * as z from "zod";
+import axios from "axios";
+import qs from "query-string";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Plus } from "lucide-react";
+import { Plus, Smile } from "lucide-react";
 
 interface ChatInputProps {
   apiUrl: string;
@@ -29,8 +31,17 @@ export const ChatInput = ({ apiUrl, query, name, type }: ChatInputProps) => {
 
   const isLoading = form.formState.isSubmitting;
 
-  const onSubmit = async (value: z.infer<typeof formSchema>) => {
-    console.log(value);
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      const url = qs.stringifyUrl({
+        url: apiUrl,
+        query,
+      });
+
+      await axios.post(url, values);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -53,7 +64,14 @@ export const ChatInput = ({ apiUrl, query, name, type }: ChatInputProps) => {
                   <Input
                     disabled={isLoading}
                     className="px-14 py-6 bg-zinc-200/90 dark:bg-zinc-700/75 border-none border-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-zinc-600 dark:text-zinc-200"
+                    placeholder={`Message ${
+                      type === "conversation" ? name : "#" + name
+                    }`}
+                    {...field}
                   />
+                  <div className="absolute top-7 right-8">
+                    <Smile />
+                  </div>
                 </div>
               </FormControl>
             </FormItem>
