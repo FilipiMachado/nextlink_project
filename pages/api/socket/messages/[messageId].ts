@@ -87,6 +87,60 @@ export default async function handler(
 
     const isMessageOwner = message.memberId === member.id;
     const isAdmin = member.role === MemberRole.ADMIN;
+    const isModerator = member.role === MemberRole.MODERATOR;
+    const canModify = isMessageOwner || isAdmin || isModerator;
+
+    if (!canModify) {
+      return res.status(401).json({ error: "Unauthorized" });
+    }
+
+    if (req.method === "DELETE") {
+      message = await db.message.update({
+        where: {
+          id: messageId as string,
+        },
+        data: {
+          fileUrl: null,
+          content: "This message has been deleted.",
+          deleted: true,
+        },
+        include: {
+          member: {
+            include: {
+              profile: true,
+            },
+          },
+        },
+      });
+    }
+
+    if (req.method === "PATCH") {
+      if (!isMessageOwner) {
+        return res.status(401).json({ error: "Unauthorized" });
+      }
+
+      message = await db.message.update({
+        where: {
+          id: messageId as string,
+        },
+        data: {
+          content,
+        },
+        include: {
+          member: {
+            include: {
+              profile: true,
+            },
+          },
+        },
+      });
+    }
+
+    const updateKey = `chat:${channelId}:messages:update`;
+
+    res?.socket?.server?.io?.emit(updateKey, message);
+
+    return res.status(200).json(message);
   } catch (error) {
     console.log("[MESSAGE_ID]", error);
     return res.status(500).json({ error: "Internal Server Error" });
