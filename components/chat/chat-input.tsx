@@ -48,7 +48,8 @@ export const ChatInput = ({ apiUrl, query, name, type }: ChatInputProps) => {
 
       form.reset();
       console.log("SEND MESSAGE BUTTON")
-      router.refresh()
+      //router.refresh()
+      window.location.reload()
     } catch (error) {
       console.log(error);
     }
