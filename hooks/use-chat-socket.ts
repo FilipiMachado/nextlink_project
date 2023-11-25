@@ -26,6 +26,7 @@ export const useChatSocket = ({
 
   useEffect(() => {
     if (!socket) {
+      return;
     }
 
     socket.on(updateKey, (message: MessageWithMemberWithProfile) => {
